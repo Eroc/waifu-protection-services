@@ -1,0 +1,49 @@
+//pz-252 LMG. if they run, they're a recon. if they don't run, they're a well-trained recon.
+
+actor PZ-252 : Chaingun replaces PlasmaRifle
+{
+	weapon.ammotype "PZAmmo"
+	weapon.ammogive 100
+	inventory.pickupmessage "You got the PZ-252 Support Weapon! Get some!"
+	attacksound "weapons/pz252"
+	decal "BulletChip"
+	tag "PZ-252"
+	states
+	{
+	Spawn:
+		PZED W -1
+		stop
+	Ready:
+		PZED A 0 ACS_ExecuteAlways(69, 0, 794)
+		PZED A 1 A_WeaponReady
+		goto Ready+1
+	Deselect:
+		PZED A 1 A_Lower
+		wait
+	Select:
+		PZED A 1 A_Raise
+		wait
+	Fire:
+		PZED B 0 A_GiveInventory("PZSTRONK", 1)
+		PZED B 0 A_FireBullets(1.5, 1.5, -1, 7, "BulletPuff")
+		PZED B 0 A_Quake(3, 3, 0, 32)
+		PZED BC 1 bright A_GunFlash
+		PZED B 0 A_SetPitch(pitch-frandom(0.0, 2.0))
+		PZED B 0 A_SetAngle(angle+frandom(-1.0, 1.0))
+		PZED A 1
+		PZED A 0 A_ReFire
+		goto Ready+1
+	Flash:
+		TNT1 A 1 A_Light1
+		TNT1 A 1 A_Light2
+		TNT1 A 1 A_Light1
+		goto LightDone
+	}
+}
+
+actor PZSTRONK : PowerupGiver
+{
+	+inventory.autoactivate
+	powerup.type PowerFrightener
+	powerup.duration 4
+}

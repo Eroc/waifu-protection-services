@@ -1,0 +1,53 @@
+actor Support : Doomplayer replaces Doomplayer
+{
+	player.weaponslot 1, "Kyla"
+	player.weaponslot 2, "SRM"
+	player.weaponslot 3, "Mosok41", "Supa7"
+	player.weaponslot 4, "ZR68c"
+	player.weaponslot 5, "MX5"
+	player.weaponslot 6, "PZ-252"
+	player.startitem "ThermalVisionItem", 1
+	player.forwardmove 0.385
+	player.sidemove 0.385
+	damagefactor "Normal", 0.56
+	mass 200
+}
+
+actor ThermalVisionItem : CustomInventory
+{
+	+invbar
+	+undroppable
+	inventory.icon "PVISB0"
+	inventory.usesound "vision/on"
+	tag "Enable Thermal Vision"
+	states
+	{
+	Use:
+		TNT1 A 0 A_SetBlend("30 0 46", .94, 99999999)
+		TNT1 A 0 A_GiveInventory("ThermalLightAmp")
+		TNT1 A 0 A_GiveInventory("ThermalVisionItem2", 1)
+		stop
+	}
+}
+
+actor ThermalLightAmp : PowerupGiver
+{
+	powerup.type LightAmp
+	powerup.duration 0x7FFFFFFF
+	+inventory.autoactivate
+}
+
+actor ThermalVisionItem2 : ThermalVisionItem
+{
+	inventory.usesound "vision/off"
+	inventory.icon "PVISA0"
+	tag "Disable Thermal Vision"
+	states
+	{
+	Use:
+		TNT1 A 0 A_SetBlend("00 00 00", 0, 99999999)
+		TNT1 A 0 A_TakeInventory("PowerLightAmp")
+		TNT1 A 0 A_GiveInventory("ThermalVisionItem", 1)
+		stop
+	}
+}

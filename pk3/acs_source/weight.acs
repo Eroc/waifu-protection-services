@@ -1,0 +1,7 @@
+#library "WEIGHT"
+#include "zcommon.acs"
+
+script 69 (int weight)
+{
+	SetActorProperty(0, APROP_SPEED, FixedDiv(weight, 1000));
+}

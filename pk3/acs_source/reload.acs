@@ -1,0 +1,12 @@
+#include "zcommon.acs"
+#library "RELOAD"
+
+script 451 (void) net
+{
+	giveinventory("ReloadItem", 1);
+}
+
+script 452 (void) net
+{
+	takeinventory("ReloadItem", 1);
+}

@@ -1,0 +1,8 @@
+clearplayerclasses
+addplayerclass "Support"
+
+addkeysection "NT Keys" NTKeys
+addmenukey "Reload" +NT_Reload
+alias +NT_Reload "puke 451"
+alias -NT_Reload "puke 452"
+defaultbind R "+NT_Reload"

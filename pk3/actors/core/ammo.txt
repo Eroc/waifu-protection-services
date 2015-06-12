@@ -1,0 +1,137 @@
+actor HandgunAmmo : Ammo replaces Clip
+{
+	inventory.amount 6
+	inventory.maxamount 84
+	ammo.backpackamount 6
+	ammo.backpackmaxamount 168
+	inventory.icon "KYLAZ0"
+	inventory.pickupmessage "Picked up some sidearm ammo."
+	scale 0.5
+	states
+	{
+	Spawn:
+		KYLA Z -1
+		stop
+	}
+}
+
+actor BulletBox replaces ClipBox
+{
+	states
+	{
+	Spawn:
+		TNT1 A 1
+		TNT1 A 0 A_SpawnItemEx("BulletAmmo", frandom(-16,16), frandom(-16,16))
+		TNT1 A 0 A_SpawnItemEx("BulletAmmo", frandom(-16,16), frandom(-16,16))
+		stop
+	}
+}
+
+actor BulletAmmo : Ammo replaces RocketAmmo
+{
+	inventory.amount 30
+	inventory.maxamount 450
+	ammo.backpackamount 30
+	ammo.backpackmaxamount 900
+	inventory.icon CLIPA0
+	inventory.pickupmessage "Picked up a 30-round magazine."
+	states
+	{
+	Spawn:
+		CLIP A -1
+		stop
+	}
+}
+
+actor PZAmmo : Ammo replaces Cell
+{
+	inventory.amount 50
+	inventory.maxamount 600
+	ammo.backpackamount 50
+	ammo.backpackmaxamount 1200
+	inventory.icon "AMMOA0"
+	inventory.pickupmessage "Picked up a box of 50 PZ rounds."
+	states
+	{
+	Spawn:
+		AMMO A -1
+		stop
+	}
+}
+
+actor ShotgunAmmo : Ammo replaces Shell
+{
+	inventory.icon "SHELA0"
+	inventory.amount 4
+	inventory.maxamount 48
+	ammo.backpackamount 4
+	ammo.backpackmaxamount 96
+	inventory.pickupmessage "Picked up a 4-pack of shotgun shells."
+	states
+	{
+	Spawn:
+		SHEL A -1
+		stop
+	}
+}
+
+actor AmmoBox replaces ShellBox
+{
+	states
+	{
+	Spawn:
+		TNT1 A 1
+		TNT1 A 0 A_SpawnItemEx("ShotgunAmmo", frandom(-16,16), frandom(-16,16))
+		TNT1 A 0 A_SpawnItemEx("ShotgunAmmo", frandom(-16,16), frandom(-16,16))
+		TNT1 A 0 A_SpawnItemEx("BulletAmmo", frandom(-16,16), frandom(-16,16))
+		stop
+	}
+}
+
+actor AmmoBox2 : BulletBox replaces RocketBox
+{
+	states
+	{
+	Spawn:
+		TNT1 A 1
+		TNT1 A 0 A_SpawnItemEx("BulletAmmo", frandom(-16,16), frandom(-16,16))
+		TNT1 A 0 A_SpawnItemEx("BulletAmmo", frandom(-16,16), frandom(-16,16))
+		TNT1 A 0 A_SpawnItemEx("BulletAmmo", frandom(-16,16), frandom(-16,16))
+		TNT1 A 0 A_SpawnItemEx("BulletAmmo", frandom(-16,16), frandom(-16,16))
+		stop
+	}
+}
+
+actor AmmoBox3 replaces CellPack
+{
+	states
+	{
+	Spawn:
+		TNT1 A 1
+		TNT1 A 0 A_SpawnItemEx("PZAmmo", frandom(-16,16), frandom(-16,16))
+		TNT1 A 0 A_SpawnItemEx("PZAmmo", frandom(-16,16), frandom(-16,16))
+		TNT1 A 0 A_SpawnItemEx("PZAmmo", frandom(-16,16), frandom(-16,16))
+		TNT1 A 0 A_SpawnItemEx("PZAmmo", frandom(-16,16), frandom(-16,16))
+		TNT1 A 0 A_SpawnItemEx("PZAmmo", frandom(-16,16), frandom(-16,16))
+		stop
+	}
+}
+/*
+actor SmokeGrenadeAmmo : Ammo replaces BlurSphere
+{
+	inventory.amount 1
+	inventory.maxamount 2
+	ammo.backpackamount 1
+	ammo.backpackmaxamount 4
+	inventory.pickupmessage "Picked up a smoke grenade."
+	inventory.icon "FRAGA0"
+	translation "9:12=108:111", "112:127=96:111"
+	scale 0.35
+	states
+	{
+	Spawn:
+		FRAG A -1
+		stop
+	}
+}
+*/

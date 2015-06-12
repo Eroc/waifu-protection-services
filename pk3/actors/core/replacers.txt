@@ -1,0 +1,74 @@
+//no health or armor allowed
+//git gud casul
+
+actor BlankReplacer : RandomSpawner
+{
+	dropitem ""
+}
+
+actor HealthReplacer : HealthBonus
+{
+	inventory.maxamount 100
+	inventory.pickupmessage "You suck down some CASUL JUICE. Mmm, shame flavored."
+}
+
+actor MedikitReplacer : BlankReplacer replaces Medikit
+{
+}
+
+actor StimpackReplacer : BlankReplacer replaces Stimpack
+{
+}
+
+actor HBonusReplacer : BlankReplacer replaces HealthBonus
+{
+}
+
+actor ABonusReplacer : BlankReplacer replaces ArmorBonus
+{
+}
+
+actor GArmorReplacer : BlankReplacer replaces GreenArmor
+{
+}
+
+actor BArmorReplacer : BlankReplacer replaces BlueArmor
+{
+}
+
+actor SSphereReplacer : HealthReplacer replaces Soulsphere
+{
+}
+
+actor MSphereReplacer : HealthReplacer replaces Megasphere
+{
+}
+
+actor BerserkReplacer : HealthReplacer replaces Berserk
+{
+}
+
+actor LightAmpReplacer : BlankReplacer replaces Infrared
+{
+}
+
+//until i figure out something for the ghost this is gonna have to do
+actor BFGReplacer replaces BFG9000
+{
+	states
+	{
+	Spawn:
+		TNT1 A 1
+		TNT1 A 0 A_SpawnItemEx("PZ-252")
+		TNT1 A 0 A_SpawnItemEx("PZAmmo", frandom(-32,32), frandom(-32,32))
+		TNT1 A 0 A_SpawnItemEx("PZAmmo", frandom(-32,32), frandom(-32,32))
+		TNT1 A 0 A_SpawnItemEx("PZAmmo", frandom(-32,32), frandom(-32,32))
+		TNT1 A 0 A_SpawnItemEx("PZAmmo", frandom(-32,32), frandom(-32,32))
+		stop
+	}
+
+}
+
+actor ChainsawReplacer : BlankReplacer replaces Chainsaw
+{
+}

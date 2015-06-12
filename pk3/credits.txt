@@ -1,0 +1,9 @@
+sprites:
+kyla - mike12
+srm - eriance
+mosok - id software
+zr68c - mike12
+mx - hemoptysis
+pz252 - 
+
+all sounds taken from NEOTOKYO, a free source mod by STUDIO RADI-8

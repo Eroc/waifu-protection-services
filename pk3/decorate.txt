@@ -1,0 +1,22 @@
+Actor Boolean : Inventory
+{
+    Inventory.MaxAmount 1
+    +UNDROPPABLE
+    -INVBAR
+}
+
+actor ReloadItem : Boolean
+{
+}
+
+#include actors/core/player.txt
+#include actors/core/replacers.txt
+#include actors/core/ammo.txt
+
+#include actors/weapons/kyla.txt
+#include actors/weapons/srm.txt
+#include actors/weapons/mosok.txt
+#include actors/weapons/supa7.txt
+#include actors/weapons/zr68c.txt
+#include actors/weapons/mx.txt
+#include actors/weapons/pz252.txt

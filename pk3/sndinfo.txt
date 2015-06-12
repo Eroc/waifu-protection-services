@@ -1,0 +1,25 @@
+weapons/kyla sounds/kyla/kyla_fire.wav
+
+weapons/supa7 sounds/supa7/supa_fire.wav
+
+srm/fire sounds/srm/srm_fire.wav
+srm/reload sounds/srm/srm_reload.wav
+srm/dryfire sounds/srm/srm_empty.wav
+
+zr68/cfire sounds/zr68/zr68c_fire.wav
+zr68/reload sounds/zr68/zr68_reload.wav
+zr68/reload2 sounds/zr68/zr68_reload2.wav
+zr68/dryfire sounds/zr68/zr68_empty.wav
+
+weapons/mx5 sounds/mx/mx_fire.wav
+
+weapons/pz252 sounds/pz/pz_fire.wav
+
+weapons/mosok sounds/m41/m41_fire.wav
+
+vision/on sounds/vision_on.wav
+vision/off sounds/vision_off.wav
+
+grunt/attack sounds/m41/m41_fire.wav
+shotguy/attack sounds/supa7/supa_fire.wav
+chainguy/attack sounds/zr68/zr68c_fire.wav

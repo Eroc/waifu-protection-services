@@ -1,0 +1,13 @@
+#library "SETUP"
+#include "zcommon.acs"
+
+script 68 ENTER
+{
+	clearinventory();
+	giveinventory("SRM", 1);
+	giveinventory("BulletAmmo", 200);
+	giveinventory("Kyla", 1);
+	giveinventory("HandgunAmmo", 48);
+	giveinventory("Health", 100);
+	setweapon("SRM");
+}

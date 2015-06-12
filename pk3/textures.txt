@@ -1,0 +1,28 @@
+// fuck you slade you're a piece of shit
+// fuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuck this was awful
+
+Sprite MX5GA0, 78, 138
+{
+	XScale 1.100
+	YScale 1.100
+	Offset -138, -80
+	Patch MX5GA0, 0, 0
+}
+
+Sprite MX5FA0, 78, 138
+{
+	XScale 1.100
+	YScale 1.100
+	Offset -138, -80
+	Patch MX5FA0, 0, 0
+}
+
+Sprite MX5GB0, 74, 138
+{
+	XScale 1.090
+	YScale 1.090
+	Offset -137, -85
+	Patch MX5GB0, 0, 0
+}
+
+// End of texture definitions
